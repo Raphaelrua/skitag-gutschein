@@ -163,7 +163,7 @@ p{line-height:1.5;margin:0 0 14px}
     {d:"Sa, 23. Januar 2027",n:"Hochwinter"},
     {d:"Sa, 30. Januar 2027",n:"Pulverschnee-Chance"},
     {d:"Sa, 6. Februar 2027",n:"Kalt, klar, perfekt"},
-    {d:"Sa, 13. Februar 2027",n:"Valentinstag gleich danach, Ausrede inklusive"},
+    {d:"Sa, 13. Februar 2027",n:"Tag vor Valentinstag. Du hast ja eh kein Date"},
     {d:"Sa, 27. Februar 2027",n:"Sonnenskilauf"},
     {d:"Mo, 31. Februar 2027",n:"Unser Geheimtipp",fake:true}
   ];
@@ -178,7 +178,7 @@ p{line-height:1.5;margin:0 0 14px}
       if(o.fake){
         fakeTries++;
         b.classList.remove('wobble');void b.offsetWidth;b.classList.add('wobble');
-        dToast.textContent=fakeTries===1?"Schau nochmal genau in den Kalender…":"Den 31. Februar gibts nicht. Der schmilzt jetzt.";
+        dToast.textContent=fakeTries===1?"Schau nochmal genau in den Kalender…":"Den 31. Februar gibts nicht. Du Pfeife.";
         if(fakeTries>=2){b.classList.add('melt');b.disabled=true;}
         return;
       }
@@ -218,7 +218,7 @@ p{line-height:1.5;margin:0 0 14px}
   let msg='';
   $('toDone').addEventListener('click',()=>{
     $('rDate').textContent=chosenDate;$('rFood').textContent=chosenFood;
-    msg='Gutschein eingelöst! Mein Skitag: '+chosenDate+'. In der Hütte gibts für mich: '+chosenFood+'. Freu mich riesig!';
+    msg='Hallo, ich bin Fabian und schwul. Hiermit löse ich den Gutschein ein. Mein Skitag: '+chosenDate+'. In der Hütte gibts für mich: '+chosenFood+'. Freu mich riesig!';
     $('wa').href='https://wa.me/?text='+encodeURIComponent(msg);
     show('s4');burst=true;
   });
